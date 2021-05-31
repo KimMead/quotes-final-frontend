@@ -1,8 +1,10 @@
-export function fetchKinds(action) {
-    // fetch('http://localhost:3000/api/v1/kinds')
-    // .then(resp => resp.json())
-    // .then(data => console.log(data))
-
-    return action
-
+export function fetchKinds() {
+        return (dispatch) => {
+        fetch('http://localhost:3000/api/v1/kinds')
+        .then(resp => resp.json())
+        .then(kinds => dispatch({
+            type: 'FETCH_KINDS',
+            payload: kinds 
+        }))
+    }
 }

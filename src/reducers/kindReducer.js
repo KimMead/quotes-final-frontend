@@ -2,7 +2,11 @@
 
 export default function kindReducer(state = {kinds: []}, action) {
 
-return action.payload
+    switch (action.type) {
+        case 'FETCH_KINDS':
+            return {kinds: action.payload} 
+        default: 
+            return state 
 
-
+    }
 }
