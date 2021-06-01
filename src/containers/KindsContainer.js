@@ -3,7 +3,7 @@
 // Top level component - should be rendered in the App component 
 import React from 'react';
 import {connect} from 'react-redux';
-import {Route} from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 import {fetchKinds} from '../actions/fetchKinds';
 import Kinds from '../components/Kinds';
 import Kind from '../components/Kind';
@@ -19,10 +19,11 @@ class KindsContainer extends React.Component {
     render(){
         return (
             <div>
-                <Route path='/kinds/new' component={KindInput}/>
-                <Route path='/kinds/:id' render={(routerProps) => <Kind {...routerProps} kinds={this.props.kinds}/>} />
-                <Route exact path='/kinds' render={(routerProps) => <Kinds {...routerProps} kinds={this.props.kinds}/>} />
-                
+                <Switch>
+                    <Route path='/kinds/new' component={KindInput}/>
+                    <Route path='/kinds/:id' render={(routerProps) => <Kind {...routerProps} kinds={this.props.kinds}/>} />
+                    <Route exact path='/kinds' render={(routerProps) => <Kinds {...routerProps} kinds={this.props.kinds}/>} />
+                </Switch>
             </div>
         )
     }

@@ -25,8 +25,9 @@ handleSubmit = (event) => {
     render() {
         return (
             <div>
+                <h2>Create A New Quote Category</h2>
                 <form onSubmit={this.handleSubmit}>
-                    <label>Category Name:</label>
+                    <label><h3>Enter Category Name:</h3></label>
                     <input type='text' placeholder='Name' value={this.state.name} name="name" onChange={this.handleChange}/>
                     <input type="submit"/>
                     <br></br>
