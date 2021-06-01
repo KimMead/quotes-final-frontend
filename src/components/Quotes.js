@@ -4,7 +4,9 @@ const Quotes = (props) => {
 
     return (
         <div>
-            Quotes
+            {props.quotes && props.quotes.map(quote => 
+                <li key={quote.id}>{quote.content}<br></br> - {quote.author}</li>
+            )}
         </div>
     )
 }

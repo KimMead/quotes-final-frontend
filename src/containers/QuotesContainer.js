@@ -7,7 +7,7 @@ class QuotesContainer extends React.Component {
     render() {
         return (
             <div>
-                <QuoteInput/>
+                <QuoteInput kind={this.props.kind}/>
                 <Quotes quotes={this.props.kind && this.props.kind.quotes}/>
             </div>
         )
