@@ -17,6 +17,8 @@ handleChange = (event) => {
 handleSubmit = (event) => {
     event.preventDefault() 
     this.props.addKind(this.state)
+    this.setState({name: ''})
+    
 }
 
 

@@ -6,8 +6,6 @@ import KindsContainer from './containers/KindsContainer'
 class App extends React.Component {
 
   componentDidMount() {
-    
-
   }
   
   render() {
@@ -21,3 +19,4 @@ class App extends React.Component {
 
 
 export default App;
+// can set up all routes in this file/component
