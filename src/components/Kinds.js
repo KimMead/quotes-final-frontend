@@ -2,7 +2,7 @@
 // props need to be passed in since this is a functional components
 import React from 'react';
 import {Route, Link} from 'react-router-dom';
-import Kind from './Kind'
+import Kind from '../components/Kind'
 
 const Kinds = (props) => {
 

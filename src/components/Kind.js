@@ -1,5 +1,6 @@
 import React from 'react';
 import {Redirect} from 'react-router-dom';
+import KindEdit from '../components/KindEdit';
 import QuotesContainer from '../containers/QuotesContainer'
 
 const Kind = (props) => {
@@ -12,6 +13,8 @@ return (
             {kind ? kind.name : null}
         </h2>
         <QuotesContainer kind={kind}/>
+        {/* <KindEdit kind={kind}/> */}
+        <KindEdit kind={kind}/>
     </div>
     )
 }

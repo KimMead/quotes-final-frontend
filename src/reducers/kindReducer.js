@@ -8,7 +8,6 @@ export default function kindReducer(state = {kinds: []}, action) {
         case 'ADD_KIND':
             return {...state, kinds: [...state.kinds, action.payload]}
         case 'ADD_QUOTE':
-            
         let kinds = state.kinds.map(kind => {
                 if (kind.id === action.payload.id) {
                     return action.payload
@@ -17,6 +16,24 @@ export default function kindReducer(state = {kinds: []}, action) {
                 }
             })
             return {...state, kinds: kinds}
+        case 'DELETE_QUOTE':
+            let kindsTwo = state.kinds.map(kind => {
+                if (kind.id === action.payload.id) {
+                    return action.payload
+                } else {
+                    return kind 
+                }
+            })
+            return {...state, kinds: kindsTwo}
+        case 'EDIT_KIND':
+        let kindsThree = state.kinds.map(kind => {
+            if (kind.id === action.payload.id) {
+                return action.payload
+            } else {
+                return kind 
+            }
+        })
+        return {...state, kinds: kindsThree}
         default: 
             return state 
 
