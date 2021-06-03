@@ -8,7 +8,7 @@ import {fetchKinds} from '../actions/fetchKinds';
 import Kinds from '../components/Kinds';
 import Kind from '../components/Kind';
 import KindInput from '../components/KindInput';
-import NavBar from '../components/NavBar'
+import Quote from '../components/Quote';
 
 
 class KindsContainer extends React.Component {
@@ -20,11 +20,11 @@ class KindsContainer extends React.Component {
     render(){
         return (
             <div>
-                <NavBar/>
                 <Switch>
                     <Route path='/kinds/new' component={KindInput}/>
                     <Route path='/kinds/:id' render={(routerProps) => <Kind {...routerProps} kinds={this.props.kinds}/>} />
                     <Route exact path='/kinds' render={(routerProps) => <Kinds {...routerProps} kinds={this.props.kinds}/>} />
+                    <Route exact path='/quote/:id' component={Quote}/>
                 </Switch>
             </div>
         )

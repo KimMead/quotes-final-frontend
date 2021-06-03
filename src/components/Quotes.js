@@ -1,20 +1,27 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {deleteQuote} from '../actions/deleteQuote'
+import {Route, Link} from 'react-router-dom';
+// import {deleteQuote} from '../actions/deleteQuote'
 
 const Quotes = (props) => {
 
-const handleDelete = (quote) => {
-    props.deleteQuote(quote.id, quote.kind_id)
-}
+// const handleDelete = (quote) => {
+//     props.deleteQuote(quote.id, quote.kind_id)
+// }
 
     return (
         <div>
-            {props.quotes && props.quotes.map(quote => 
-                <li key={quote.id}>{quote.content}<br></br> - {quote.author} <button onClick={() => handleDelete(quote)}>Delete</button></li>
+            <h2>Quote List</h2>
+        {props.quotes && props.quotes.map(quote => 
+            <div key={quote.id}> Quote: {quote.content}<br></br>
+            Who said it? {quote.author}
+            <Link to={`/quote/${quote.id}`}>{quote.content}</Link>
+            {/* <button onClick={() => handleDelete(quote)}>Delete</button> */}
+            </div>
             )}
         </div>
     )
 }
 
-export default connect(null, {deleteQuote})(Quotes) 
+// export default connect(null, {deleteQuote})(Quotes) 
+export default Quotes

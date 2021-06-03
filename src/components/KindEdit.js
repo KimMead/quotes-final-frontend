@@ -25,9 +25,9 @@ handleSubmit = (event) => {
     render() {
         return (
             <div>
-                <h2>Edit Category Name:</h2>
+                
                 <form onSubmit={this.handleSubmit}>
-                    <label><h3>Enter New Category Name:</h3></label>
+                    <label><h3>Change Category Name:</h3></label>
                     <input type='text' placeholder='Name' value={this.state.name} name="name" onChange={this.handleChange}/>
                     <input type="submit"/>
                     <br></br>

@@ -1,6 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {addKind} from '../actions/addKind'
+import KindsContainer from '../containers/KindsContainer'
+import Kinds from '../components/Kinds'
 
 class KindInput extends React.Component {
 // local state, not through store
@@ -18,9 +20,9 @@ handleSubmit = (event) => {
     event.preventDefault() 
     this.props.addKind(this.state)
     this.setState({name: ''})
+    this.props.history.push('/kinds')
     
 }
-
 
     render() {
         return (
@@ -32,6 +34,7 @@ handleSubmit = (event) => {
                     <input type="submit"/>
                     <br></br>
                     <br></br>
+                    
                 </form>
             </div>
         )

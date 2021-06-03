@@ -2,6 +2,7 @@ import React from 'react';
 import {Redirect} from 'react-router-dom';
 import KindEdit from '../components/KindEdit';
 import QuotesContainer from '../containers/QuotesContainer'
+import {Route, Link} from 'react-router-dom';
 
 const Kind = (props) => {
 
@@ -12,9 +13,9 @@ return (
         <h2>
             {kind ? kind.name : null}
         </h2>
-        <QuotesContainer kind={kind}/>
-        {/* <KindEdit kind={kind}/> */}
         <KindEdit kind={kind}/>
+        <QuotesContainer kind={kind}/>
+        
     </div>
     )
 }

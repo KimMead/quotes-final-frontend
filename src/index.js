@@ -5,7 +5,6 @@ import thunk from 'redux-thunk';
 import {Provider} from 'react-redux';
 import {BrowserRouter as Router} from 'react-router-dom'
 import kindReducer from './reducers/kindReducer'
-
 import './index.css';
 import App from './App';
 
@@ -22,6 +21,7 @@ ReactDOM.render(
         <App />
     </Router>
 </Provider>, 
-document.getElementById('root'));
+document.getElementById('root')
+);
 
 

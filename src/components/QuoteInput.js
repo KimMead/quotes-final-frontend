@@ -29,13 +29,14 @@ class QuoteInput extends React.Component {
 render() {
     return (
         <div>
+            <h3>Create A New Quote:</h3>
             <form onSubmit={this.handleSubmit}>
                 <label>Quote:</label>
-                <input type='text' placeholder='Enter Quote' name="content" value={this.state.content} onChange={this.handleChange}/><br></br>
+                <textarea name="content" placeholder='Enter Quote' value={this.state.content} onChange={this.handleChange}/><br></br>
                 <label>Author:</label>
-                <input type='text' placeholder='Enter Author' name="author" value={this.state.author} onChange={this.handleChange}/><br></br>
+                <textarea name="author" placeholder='Enter Author' value={this.state.author} onChange={this.handleChange}/><br></br>
                 <label>Description:</label>
-                <input type='text' placeholder='Enter Description' name="description" value={this.state.description} onChange={this.handleChange}/> 
+                <textarea name="description"  placeholder='Enter Description' value={this.state.description} onChange={this.handleChange}/> 
                 <input type="submit"/>
             </form>
         </div>
