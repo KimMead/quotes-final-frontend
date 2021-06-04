@@ -27,7 +27,9 @@ class QuoteInput extends React.Component {
     }
 
 render() {
+    
     return (
+        
         <div>
             <h3>Create A New Quote:</h3>
             <form onSubmit={this.handleSubmit}>
@@ -40,6 +42,7 @@ render() {
                 <input type="submit"/>
             </form>
         </div>
+        
     )
 }
 }

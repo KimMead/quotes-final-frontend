@@ -8,11 +8,13 @@ const Kinds = (props) => {
 
 return (
     <div>
+        <br></br>
         <h2>Quote Category List</h2>
+        <br></br>
         {props.kinds.map(kind => 
-            <li key={kind.id}>
+            <div key={kind.id}>
                 <Link to={`/kinds/${kind.id}`}>{kind.name}</Link>
-            </li>)}
+            </div>)}
     </div>
     )
 }

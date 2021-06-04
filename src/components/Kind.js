@@ -9,12 +9,15 @@ const Kind = (props) => {
 let kind = props.kinds[props.match.params.id - 1]
 
 return (
+    
     <div>
+        <br></br>
         <h2>
             {kind ? kind.name : null}
         </h2>
         <KindEdit kind={kind}/>
         <QuotesContainer kind={kind}/>
+        
         
     </div>
     )
