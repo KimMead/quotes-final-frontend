@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import Quotes from '../components/Quotes';
 import {Route, Link} from 'react-router-dom';
 import Kind from '../components/Kind'
+// import QuoteEdit from '../components/QuoteEdit';
 
 
 const Quote = (props) => {
@@ -13,16 +14,12 @@ const Quote = (props) => {
     
     return (
         
-        <div>
-            <br></br>
-                
-                {/* Quote content */}
-                {/* Quote author */}
-                {/* Quote description */}
-
-                
-           {/* QuoteEdit */}
-           {/* <button> <i className="far fa-edit"></i></button> */}
+        <div className="quote-details">
+            <h2>Quote Details</h2>
+            Content:
+            Author:
+            Description:
+            {/* <QuoteEdit/> */}
         </div>
         )
     }

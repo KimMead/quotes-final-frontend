@@ -33,7 +33,9 @@ export default function kindReducer(state = {kinds: []}, action) {
                 return kind 
             }
         })
-        return {...state, kinds: kindsThree}
+            return {...state, kinds: kindsThree}
+        case 'EDIT_QUOTE':
+        
         default: 
             return state 
 
