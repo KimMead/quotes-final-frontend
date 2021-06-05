@@ -11,7 +11,6 @@ class QuotesContainer extends React.Component {
             <div>
                 <Quotes quotes={this.props.kind && this.props.kind.quotes}/><br></br>
                 <QuoteInput kind={this.props.kind}/>
-                
             </div>
         )
     }

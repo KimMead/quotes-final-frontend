@@ -20,9 +20,7 @@ class App extends React.Component {
         <NavBar/>
         <br></br>
         <Switch> 
-        <Route path='/kinds/new' component={KindInput}/>
         <KindsContainer/>
-       
         </Switch>
       </div>
     );

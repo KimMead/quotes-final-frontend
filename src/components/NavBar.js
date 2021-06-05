@@ -8,7 +8,7 @@ const NavBar = (props) => {
         <div className="NavBar">
             <Link to="/">Home</Link>
             <Link to="/kinds">Quote Categories</Link>
-            <Link to='/kinds/new' >Add a Category</Link>
+            <Link to="/new">Add a Category</Link>
         </div>
     )
 }

@@ -19,14 +19,12 @@ class KindsContainer extends React.Component {
 
     render(){
         return (
-            <div>
-                <Switch>
-                    <Route path='/kinds/new' component={KindInput}/>
-                    <Route path='/kinds/:id' render={(routerProps) => <Kind {...routerProps} kinds={this.props.kinds}/>} />
-                    <Route exact path='/kinds' render={(routerProps) => <Kinds {...routerProps} kinds={this.props.kinds}/>} />
-                    <Route exact path='/quote/:id' render={(routerProps) => <Quote {...routerProps} quote={this.props.kind}/>} />
-                </Switch>
-            </div>
+            <>
+                <Route exact path='/new' component={KindInput}/>
+                <Route path='/kinds/:id' render={(routerProps) => <Kind {...routerProps} kinds={this.props.kinds}/>} />
+                <Route exact path='/kinds' render={(routerProps) => <Kinds {...routerProps} kinds={this.props.kinds}/>} />
+                <Route exact path='/kinds/:id/quote/:id' render={(routerProps) => <Quote {...routerProps} quote={this.props.kind}/>} />
+            </>
         )
     }
 }

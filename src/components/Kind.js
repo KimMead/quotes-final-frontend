@@ -6,7 +6,9 @@ import {Route, Link} from 'react-router-dom';
 
 const Kind = (props) => {
 
-let kind = props.kinds[props.match.params.id - 1]
+let kind = props.kinds.filter((item) => {
+    return item.id == props.match.params.id
+})[0]
 
 return (
     
@@ -17,8 +19,6 @@ return (
         </h2>
         <KindEdit kind={kind}/>
         <QuotesContainer kind={kind}/>
-        
-        
     </div>
     )
 }
