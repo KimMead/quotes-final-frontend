@@ -34,7 +34,14 @@ export default function kindReducer(state = {kinds: []}, action) {
             }
         })
             return {...state, kinds: kindsThree}
-        case 'EDIT_QUOTE':
+        case 'DELETE_KIND':
+            let kindsThree = state.kinds.map(kind => {
+                if (kind.id === action.payload.id) {
+                    return action.payload
+                } else {
+                    return kind
+                }
+            })
         
         default: 
             return state 
