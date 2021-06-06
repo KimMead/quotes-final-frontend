@@ -8,10 +8,6 @@ import {deleteKind} from '../actions/deleteKind'
 
 const Kinds = (props) => {
 
-const handleDelete = (kind) => {
-    props.deleteKind(kind.id)
-}
-
 return (
     <div>
         <br></br>
@@ -19,11 +15,21 @@ return (
         <br></br>
         {props.kinds.map(kind => 
             <div key={kind.id}>
-                <Link to={`/kinds/${kind.id}`}>{kind.name}</Link>
-                <button onClick={() => handleDelete(kind)}><i className="fas fa-trash"></i></button>
+                <Link onClick={() => props.handleClick(kind.id)} to={`/kinds/${kind.id}`}>{kind.name}</Link>
+                <button onClick={() => props.handleDelete(kind)}><i className="fas fa-trash"></i></button>
             </div>)}
     </div>
     )
 }
 
-export default connect(null, {deleteKind})(Kinds) 
+const mapDispatchToProps = (dispatch) => {
+    return {
+        handleClick: (id) => dispatch({
+            type: 'SET_KIND_ID', 
+            payload: id
+        }), 
+        handleDelete: (kind) => deleteKind(kind.id)
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Kinds) 

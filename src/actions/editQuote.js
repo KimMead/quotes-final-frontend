@@ -1,7 +1,7 @@
 // export const editQuote = (data) => {
     
 //     return (dispatch) => {
-//         fetch(`http://localhost:3000/api/v1/kinds/${data.id}`, {
+//         fetch(`http://localhost:3000/api/v1/kinds/${kindId}/quotes/${quoteId}`, {
 //             headers: {
 //                 'Content-Type': 'application/json',
 //                 'Accept': 'application/json',

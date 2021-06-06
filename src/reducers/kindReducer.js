@@ -35,16 +35,19 @@ export default function kindReducer(state = {kinds: []}, action) {
         })
             return {...state, kinds: kindsThree}
         case 'DELETE_KIND':
-            let kindsThree = state.kinds.map(kind => {
+            let kindsFour = state.kinds.map(kind => {
                 if (kind.id === action.payload.id) {
                     return action.payload
                 } else {
                     return kind
                 }
             })
-        
+            return {...state, kinds: kindsFour}
+
+        case 'SET_KIND_ID':
+            localStorage.setItem("currentKindId", action.payload)
+            return {...state, kindId: action.payload}
         default: 
             return state 
-
     }
 }
