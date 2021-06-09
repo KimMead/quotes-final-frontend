@@ -11,6 +11,7 @@ import KindInput from '../components/KindInput';
 import Quote from '../components/Quote';
 
 
+
 class KindsContainer extends React.Component {
 
     componentDidMount() {
@@ -21,8 +22,8 @@ class KindsContainer extends React.Component {
         return (
             <>
                 <Route exact path='/new' component={KindInput}/>
-                <Route path='/kinds/:id' render={(routerProps) => <Kind {...routerProps} kinds={this.props.kinds}/>} />
-                <Route exact path='/kinds' render={(routerProps) => <Kinds {...routerProps} kinds={this.props.kinds}/>} />
+                <Route path='/kinds/:id' render={(routerProps) => <Kind {...routerProps} />} />
+                <Route exact path='/kinds' render={(routerProps) => <Kinds {...routerProps} />} />
                 <Route exact path='/quote/:id' render={(routerProps) => <Quote {...routerProps} quote={this.props.kinds}/>} />
             </>
         )

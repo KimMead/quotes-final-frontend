@@ -6,6 +6,8 @@ import NavBar from './components/NavBar'
 import { Route, Switch, Link, withRouter } from 'react-router-dom'
 import KindInput from './components/KindInput'
 import Kinds from './components/Kinds'
+import Home from './components/Home'
+
 
 
 class App extends React.Component {
@@ -18,6 +20,7 @@ class App extends React.Component {
         <h1>Quote Keeper</h1>
         </header>
         <NavBar/>
+        <Home/>
         <br></br>
         <Switch> 
         <KindsContainer/>

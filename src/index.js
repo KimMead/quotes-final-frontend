@@ -13,7 +13,7 @@ let kindId = localStorage.getItem("currentKindId") || null
 let store = createStore(kindReducer, {kindId: kindId}, composeEnhancers(applyMiddleware(thunk)))
 
 // store is where you store your data globally
-// we send an action object to the reducer and decides what we want to update about our current store, and the reducer will retrun an updated version of the store 
+// we send an action object to the reducer and decide what we want to update about our current store, and the reducer will retrun an updated version of the store 
 
 ReactDOM.render(
 <Provider store={store}>
