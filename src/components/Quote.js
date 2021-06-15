@@ -1,4 +1,3 @@
-import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 import Quotes from '../components/Quotes';
 import {Route, Link} from 'react-router-dom';
@@ -44,8 +43,9 @@ let quoteDetails = props.getQuoteDetails(props.kinds, props.kindId, props.match.
                 let quote = kind.quotes.filter((item) => {
                     return item.id == quoteId
                 })[0]
-                return quote
                 console.log(quote)
+                return quote
+                
             }
         }
     }

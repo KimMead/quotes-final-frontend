@@ -1,6 +1,6 @@
 // responsible for rendering a list of quote kinds. 
 // props need to be passed in since this is a functional components
-import React, { useEffect } from 'react';
+
 import {connect} from 'react-redux'
 import {Route, Link} from 'react-router-dom';
 import Kind from '../components/Kind'
@@ -8,9 +8,7 @@ import {deleteKind} from '../actions/deleteKind'
 
 const Kinds = (props) => {
 
-useEffect(() => {
-    console.log(props.kinds)
-},[props.kinds])
+
     
 const handleDeleteButton = (event, kind) => {
         event.preventDefault()

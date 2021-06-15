@@ -27,8 +27,8 @@ class QuoteEdit extends React.Component {
         return (
             <div className="quote-edit">
                 <form onSubmit={this.handleSubmit}>
-                    <label><h3>Edit Quote:</h3></label>
-                    <label>
+                    <label><h3>Edit Quote:</h3></label><br></br>
+                        <label>
                         Content: 
                     <input type='text' placeholder='Content' value={this.state.content} name="content" onChange={this.handleChange}/>
                     </label>
@@ -43,6 +43,7 @@ class QuoteEdit extends React.Component {
                     <input type="submit"/>
                     <br></br>
                     <br></br>
+                    
                 </form>
             </div>
         )

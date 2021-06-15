@@ -18,7 +18,6 @@ const Kind = (props) => {
             {kind && (
                 <>
                     <h2>
-
                         {kind.name}
                     </h2>
                     <KindEdit kind={kind} />

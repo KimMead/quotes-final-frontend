@@ -105,6 +105,7 @@ h1 {
 .quote-edit {
   display: flex;
   flex-direction: column;
+  padding: 4rem;
 }
 
 .home {
@@ -114,6 +115,8 @@ h1 {
   padding: 4rem;
   width: 100%; 
 }
+
+
 
 
 

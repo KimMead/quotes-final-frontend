@@ -11,12 +11,12 @@ import KindInput from '../components/KindInput';
 import Quote from '../components/Quote';
 
 
-
 class KindsContainer extends React.Component {
-
+// this.is a class
     componentDidMount() {
         this.props.fetchKinds()
     }
+    // HOOK that gets invoked right after a react component has been mounted (first render lifecycle)
 
     render(){
         return (
@@ -29,11 +29,10 @@ class KindsContainer extends React.Component {
         )
     }
 }
-
+// Adding a new prop 
 const mapStateToProps = state => {
     return {
         kinds: state.kinds 
-
     }
 }
 
