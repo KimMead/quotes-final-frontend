@@ -1,3 +1,5 @@
+This is a simple Quote tracking app that allows users to keep track of their favorite quotes/sayings/expressions.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
